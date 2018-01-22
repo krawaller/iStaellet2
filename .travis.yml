@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '8'
+dist: trusty
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  yarn serve --server config --dest firebase.json && yarn test
+deploy:
+  provider: firebase
+  token:
+    secure: AU6EfozC3P0jOzisJ+UQeNNn+DO2yYFLjfiRh2dmd2cdf5451KmjKt2j74rkPOq/or5gjNJaBsmt7xp5PQmHiiBzM3baMB0+TM5+vg5aROL10fHKEp03GTdLjjKR1fLkjnEL/ylrgIwb7wQfDB69MRryBodKOGS2FPXLmUz3JdcG3OsN2kmi/9umT8KarZ1S7dCZW9kH7v8FW9ZbqfGFnRZk7ucjw5RRmRbWHERCK9WgyK0niPVAsQMq2aT36uU71iP0wAHiGj9nh/PVbEXOgFDZ8YKaSNzxYV7yC8JP4UkU+H2cbVZ8cwFAosXUDRXj+i2EkzsyT64PxwbcQaOxotvXQ0i4wyZCr8c+ydzna+VgNW+KKOcOOqxJkgqPzPnS9+cDEdZAJWI7EbLmvyvj56PwhwrJA7iWntOKGOy14hO8RViOc4njM07wKu2JrBmQ1wf65OL4vgxH+5CXRwEpoLSyHUdJq/tU3ysM35abuGOgWDb9o/4Q2/qKy8v6/eo6B5bhcMZiTphmt2A3KlFTR1LPvTU83pen5id4hOwacRE/mL064XTF/vkjRaxG9f0REhpq2giid8ZDuNXdCvGWNjDkQqR4xNqbSQKCzv0AFoDodU79P98f69whi8x+AhvEu77X0xTbLuEbC+86iAYesU7fPJXmQBK5Nu/iX8udoZE=
+  project: "istallet2"
+  skip_cleanup: true
+  on:
+    branch: master

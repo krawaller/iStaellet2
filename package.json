@@ -1,0 +1,36 @@
+{
+  "name": "istallet",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Jacob Waller <jacob@krawaller.se>",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build --template src/template.html",
+    "serve": "preact build --template src/template.html && preact serve",
+    "dev": "preact watch --template src/template.html",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-synacor": "^2.0.2",
+    "if-env": "^1.0.0",
+    "jest": "^22.1.4",
+    "preact-cli": "^2.0.1",
+    "preact-cli-plugin-async": "^1.0.0",
+    "puppeteer": "^1.0.0",
+    "superstatic": "^5.0.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.2.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "preact": "^8.2.6"
+  }
+}
