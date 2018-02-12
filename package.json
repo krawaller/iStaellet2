@@ -18,6 +18,7 @@
     "build/*"
   ],
   "devDependencies": {
+    "bundlesize": "^0.16.0",
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
     "if-env": "^1.0.0",
@@ -32,5 +33,15 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "preact": "^8.2.6"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./build/bundle.*.js",
+      "maxSize": "20 kB"
+    },
+    {
+      "path": "./build/style.*.css",
+      "maxSize": "20 kB"
+    }
+  ]
 }

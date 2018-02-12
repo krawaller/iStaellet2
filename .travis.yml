@@ -7,7 +7,7 @@ cache:
   directories:
     - node_modules
 script:
-  yarn serve --server config --dest firebase.json && yarn test
+  yarn serve --server config --dest firebase.json && yarn test && yarn bundlesize
 deploy:
   provider: firebase
   token:
